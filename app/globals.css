@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  --color-gold-light: #f7cd67;
+  --color-gold: #eabe5c;
+  --color-gold-dark: #d8ab4e;
+  --color-gold-deep: #ac7a2b;
+  --color-gold-accent: #edc35f;
+  --color-gold-warm: #f3c964;
+  --color-brown: #af7d2d;
+  --color-dark: #181818;
+  --color-green-dot: #84cc00;
+  --font-sans: var(--font-avant-garde), "Century Gothic", "Futura", "Avant Garde", Arial, sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: linear-gradient(135deg, #00050c 0%, #010101 28%, #100512 100%);
+  color: var(--color-foreground);
+  min-height: 100vh;
+}
+
+/* Gold gradient utilities */
+.gradient-gold {
+  background: linear-gradient(to right, #d8ab4e, #f7cd67);
+}
+
+.gradient-gold-reverse {
+  background: linear-gradient(to right, #f7cd67, #d8ab4e);
+}
+
+.gradient-gold-cta {
+  background: linear-gradient(to right, #d8ab4e, #f7cd67);
+}
+
+.gradient-gold-text {
+  background: linear-gradient(to right, #f7cd67, #eabe5c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-gold-border {
+  background: linear-gradient(to bottom, #f7cd67, #91783c);
+}
+
+.gradient-gold-icon {
+  background: linear-gradient(to bottom, #daad50, #bd8c38);
+}
+
+/* Gold shimmer top bar */
+.gradient-gold-bar {
+  background: linear-gradient(to right, #d8ab4e, #f7cd67);
+}
+
+/* Laptop showcase gradient */
+.gradient-showcase {
+  background: linear-gradient(to bottom right, #f7cd67, #ac7a2b);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Hide scrollbar on mobile and tablet */
+@media (max-width: 1024px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  * {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
