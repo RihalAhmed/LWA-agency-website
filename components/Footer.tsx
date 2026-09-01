@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 /* ─── shared li class ─── */
-const li = "text-[14px] sm:text-[15px] lg:text-[16px] font-medium text-white/90 flex items-center before:content-['•'] before:mr-3 before:text-[1.5em] before:leading-none";
-const liStart = "text-[14px] sm:text-[15px] lg:text-[16px] font-medium text-white/90 flex items-start before:content-['•'] before:mr-3 before:text-[1.5em] before:leading-none before:shrink-0";
-const h4 = "text-[16px] sm:text-[18px] lg:text-[20px] font-bold text-white/90 mb-2 lg:mb-5";
+const li = "text-[14px] sm:text-[15px] lg:text-[16px] 2xl:text-[22px] font-medium text-white/90 flex items-center before:content-['•'] before:mr-3 before:text-[1.5em] before:leading-none";
+const liStart = "text-[14px] sm:text-[15px] lg:text-[16px] 2xl:text-[22px] font-medium text-white/90 flex items-start before:content-['•'] before:mr-3 before:text-[1.5em] before:leading-none before:shrink-0";
+const h4 = "text-[16px] sm:text-[18px] lg:text-[20px] 2xl:text-[22px] font-bold text-white/90 mb-2 lg:mb-5";
 const ul = "flex flex-col gap-1.5 lg:gap-3 list-none p-0 m-0";
 const link = "hover:text-[#f7cd67] transition-colors pt-1";
 
@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="w-[130px] h-[112px] sm:w-[155px] sm:h-[133px] relative mb-2">
             <Image src="/images/logo@2x.png" alt="The Luxury Watch Agency" fill className="object-contain" />
           </div>
-          <p className="text-[14px] sm:text-[15px] font-medium text-white/90 leading-snug mt-4">
+          <p className="text-[14px] sm:text-[15px] 2xl:text-[18px] font-medium text-white/90 leading-snug mt-4">
             A Website That Makes Your<br />Watch Feel Worth The Price.<br />That&apos;s A Promise.
           </p>
         </div>
@@ -73,7 +73,7 @@ export default function Footer() {
             <div className="w-[165px] h-[142px] relative mb-1">
               <Image src="/images/logo@2x.png" alt="The Luxury Watch Agency" fill className="object-contain" />
             </div>
-            <p className="text-[15px] xl:text-[16px] font-medium text-white/90 leading-tight mt-4">
+            <p className="text-[15px] xl:text-[16px] 2xl:text-[24px] font-medium text-white/90 leading-tight mt-4">
               A Website That Makes Your<br />Watch Feel Worth The Price.<br />That&apos;s A Promise.
             </p>
           </div>
