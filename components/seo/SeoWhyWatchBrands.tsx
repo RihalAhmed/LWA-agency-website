@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SeoWhyWatchBrands() {
   return (
@@ -11,7 +12,7 @@ export default function SeoWhyWatchBrands() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
               src="/images/about-image.png" 
-              alt="Watch website design specialist"
+              alt="Rihal Ahmed, founder and watch website design specialist at The Luxury Watch Agency"
               className="w-full h-full object-cover rounded-[20px] lg:rounded-[40px]"
             />
             
@@ -23,7 +24,7 @@ export default function SeoWhyWatchBrands() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
                 src="/images/rihal-signature.png" 
-                alt="Rihal Signature"
+                alt="Signature of founder Rihal Ahmed"
                 className="w-auto h-[36px] md:h-[58px] mb-[3px] object-contain"
                 style={{ filter: "brightness(0) invert(1)" }}
               />
@@ -53,6 +54,14 @@ export default function SeoWhyWatchBrands() {
             <p className="uppercase font-bold text-white/90">
               WE ONLY BUILD FOR WATCHES. THAT&apos;S THE ENTIRE BUSINESS.
             </p>
+            <div className="pt-2">
+              <Link 
+                href="/#about" 
+                className="text-[14px] sm:text-[16px] font-medium text-[#f7cd67] underline underline-offset-4 hover:text-[#e8b94b] transition-colors"
+              >
+                Learn more about our agency story and design standards →
+              </Link>
+            </div>
           </div>
         </div>
 

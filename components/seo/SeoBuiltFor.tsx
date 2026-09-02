@@ -3,7 +3,7 @@ import Image from "next/image";
 const AudienceCard = ({ title, text, iconPath }: { title: string, text: string, iconPath: string }) => (
   <div className="group w-full max-w-[780px] bg-white rounded-[14px] lg:rounded-[16px] p-4 sm:p-5 flex items-center gap-3.5 lg:gap-6 shadow-sm hover:shadow-xl border border-black/20 transition-all duration-300 hover:bg-black">
     <div className="relative w-[44px] lg:w-[80px] h-[44px] lg:h-[80px] flex-shrink-0 transition-all duration-300 brightness-0 group-hover:brightness-100">
-      <Image src={iconPath} alt={title} fill className="object-contain" />
+      <Image src={iconPath} alt={`${title} specialization icon`} fill className="object-contain" />
     </div>
     <div className="flex flex-col">
       <h3 className="text-[13px] sm:text-[14px] lg:text-[20px] font-bold text-black group-hover:text-white uppercase leading-tight transition-colors duration-300">{title}</h3>
@@ -58,7 +58,7 @@ export default function SeoBuiltFor() {
             <div className="absolute inset-0 rounded-[14px] lg:rounded-[20px] overflow-hidden">
               <Image 
                 src="/images/why-us-main.png" 
-                alt="Watch website design for brands" 
+                alt="Luxury watch brand e-commerce website design presentation" 
                 fill 
                 className="object-cover object-center" 
               />
@@ -68,7 +68,7 @@ export default function SeoBuiltFor() {
             <div className="absolute w-[120px] sm:w-[170px] lg:w-[190px] xl:w-[230px] 2xl:w-[282px] h-auto aspect-square z-30 left-2 sm:left-3 lg:left-3 bottom-2 sm:bottom-3 lg:-bottom-[20px] 2xl:-bottom-[40px] drop-shadow-2xl">
               <Image 
                 src="/images/why-us-float.png" 
-                alt="Satisfaction Guarantee" 
+                alt="100% satisfaction guarantee badge for luxury watch website projects" 
                 fill 
                 className="object-contain" 
               />

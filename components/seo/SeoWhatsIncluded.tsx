@@ -1,13 +1,10 @@
-"use client";
-import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { 
   Palette,
   Film,
   Target,
-  Smartphone,
-  ChevronLeft,
-  ChevronRight
+  Smartphone
 } from "lucide-react";
 
 const FeatureItem = ({ title, description, icon: Icon, highlighted }: { title: string, description: string, icon: any, highlighted?: boolean }) => (
@@ -28,6 +25,7 @@ const includedData = [
   {
     title: "Custom Design, Not a Template",
     image: "/images/service-1.png",
+    alt: "Bespoke luxury watch website design and custom typography layout",
     features: [
       { title: "Built From Scratch", desc: "Every site is designed from scratch around your specific brand and collection — nothing recycled from an unrelated industry.", icon: Palette, highlighted: true },
     ]
@@ -35,6 +33,7 @@ const includedData = [
   {
     title: "Cinematic Product Presentation",
     image: "/images/service-2.png",
+    alt: "High-resolution cinematic watch photography and dial presentation",
     features: [
       { title: "Collector-Grade Visuals", desc: "Watches are shown the way a collector would want to examine them in person — detail, craftsmanship, and story front and center.", icon: Film, highlighted: true },
     ]
@@ -42,6 +41,7 @@ const includedData = [
   {
     title: "Conversion-Focused Structure",
     image: "/images/service-3.png",
+    alt: "Conversion-optimized watch boutique checkout and enquiry interface",
     features: [
       { title: "Built to Convert", desc: "The site is built to move a visitor from browsing to booking an appointment, sending an enquiry, or completing a purchase — not just to look nice.", icon: Target, highlighted: true },
     ]
@@ -49,6 +49,7 @@ const includedData = [
   {
     title: "Mobile-First Build",
     image: "/images/service-1.png",
+    alt: "Mobile-responsive luxury watch website experience on smartphone",
     features: [
       { title: "Designed for Mobile Reality", desc: "Most of your collectors are browsing on their phone first. The site is designed for that reality, not adapted to it after the fact.", icon: Smartphone, highlighted: true },
     ]
@@ -56,16 +57,6 @@ const includedData = [
 ];
 
 export default function SeoWhatsIncluded() {
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  const nextSlide = () => {
-    setActiveSlide((prev) => (prev + 1) % includedData.length);
-  };
-
-  const prevSlide = () => {
-    setActiveSlide((prev) => (prev - 1 + includedData.length) % includedData.length);
-  };
-
   return (
     <section className="w-full bg-[#0a0a0a] flex flex-col items-center py-14 lg:pt-[100px] lg:pb-[100px]">
       <div className="w-full max-w-[1400px] flex flex-col items-center px-5 sm:px-6 lg:px-8">
@@ -78,14 +69,14 @@ export default function SeoWhatsIncluded() {
           Every element is built specifically for how collectors evaluate and buy watches online.
         </p>
 
-        {/* Desktop Grid */}
-        <div className="hidden md:grid w-full grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6 mt-8 lg:mt-[80px]">
+        {/* Unified Responsive Grid (Zero duplicate DOM elements) */}
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 lg:mt-[80px]">
           {includedData.map((item, idx) => (
-            <div key={idx} className="bg-[#111111] rounded-[20px] border border-white/10 overflow-hidden flex flex-col shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgb(0,0,0,0.6)]">
+            <div key={idx} className="bg-[#111111] rounded-[20px] border border-white/10 overflow-hidden flex flex-col shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)]">
               <div className="relative w-full h-[200px] lg:h-[220px]">
                 <Image 
                   src={item.image} 
-                  alt={item.title} 
+                  alt={item.alt} 
                   fill 
                   className="object-cover"
                 />
@@ -108,61 +99,15 @@ export default function SeoWhatsIncluded() {
           ))}
         </div>
 
-        {/* Mobile Slider */}
-        <div className="md:hidden w-full flex flex-col mt-8">
-          <div className="relative w-full overflow-hidden">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${activeSlide * 100}%)` }}
-            >
-              {includedData.map((item, idx) => (
-                <div key={idx} className="w-full flex-shrink-0 px-1">
-                  <div className="bg-[#111111] rounded-[20px] border border-white/10 overflow-hidden flex flex-col shadow-2xl h-full">
-                    <div className="relative w-full h-[200px]">
-                      <Image 
-                        src={item.image} 
-                        alt={item.title} 
-                        fill 
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="px-5 pt-5 pb-10 flex flex-col flex-grow">
-                      <h3 className="text-[18px] sm:text-[20px] font-bold text-white mb-4">{item.title}</h3>
-                      <div className="flex flex-col gap-4">
-                        {item.features.map((feature, fIdx) => (
-                          <FeatureItem 
-                            key={fIdx}
-                            title={feature.title}
-                            description={feature.desc}
-                            icon={feature.icon}
-                            highlighted={feature.highlighted}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          {/* Slider Controls */}
-          <div className="flex justify-center items-center gap-3 mt-4 relative z-10">
-            <button 
-              onClick={prevSlide}
-              className="w-8 h-8 rounded-full bg-[#c89841] flex items-center justify-center transition-transform active:scale-95 hover:opacity-90 shadow-[0_0_10px_rgba(200,152,65,0.4)]"
-              aria-label="Previous slide"
-            >
-              <ChevronLeft className="w-4 h-4 text-white" />
-            </button>
-            <button 
-              onClick={nextSlide}
-              className="w-8 h-8 rounded-full bg-[#c89841] flex items-center justify-center transition-transform active:scale-95 hover:opacity-90 shadow-[0_0_10px_rgba(200,152,65,0.4)]"
-              aria-label="Next slide"
-            >
-              <ChevronRight className="w-4 h-4 text-white" />
-            </button>
-          </div>
+        {/* Contextual Internal Link back to Portfolio */}
+        <div className="mt-10 lg:mt-14 flex flex-col sm:flex-row items-center justify-center gap-2 text-center text-[14px] sm:text-[16px] text-white/80">
+          <span>Want to see how these standards look in a finished build?</span>
+          <Link 
+            href="/#portfolio" 
+            className="text-[#f7cd67] font-semibold underline underline-offset-4 hover:text-[#e8b94b] transition-colors"
+          >
+            See our recent work and portfolio →
+          </Link>
         </div>
 
       </div>

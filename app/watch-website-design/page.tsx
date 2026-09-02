@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import SeoHero from "@/components/seo/SeoHero";
 import SeoWhyWatchBrands from "@/components/seo/SeoWhyWatchBrands";
 import SeoWhatsIncluded from "@/components/seo/SeoWhatsIncluded";
@@ -91,8 +90,8 @@ const faqSchema = {
 export default function WatchWebsiteDesignPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
+      {/* Static JSON-LD Schema rendered directly into initial HTML source for Google & AI Overviews */}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
