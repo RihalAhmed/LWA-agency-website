@@ -115,10 +115,10 @@ export default function Hero() {
       {/* =========================================
           MOBILE/TABLET LAYOUT (Fluid Flexbox)
           ========================================= */}
-      <div className="flex flex-col lg:hidden gap-6 mt-6 px-4 sm:px-6 pb-12 w-full max-w-[100vw] overflow-x-hidden">
+      <div className="flex flex-col lg:hidden gap-6 mt-6 px-4 sm:px-6 pb-12 w-full max-w-[100vw] overflow-x-hidden items-center text-center">
 
         {/* Headline */}
-        <h1 className="text-[28px] sm:text-[36px] md:text-[52px] font-bold leading-[1.1] capitalize w-full">
+        <h1 className="text-[28px] sm:text-[36px] md:text-[52px] font-bold leading-[1.1] capitalize w-full text-center">
           <span className="text-white">
             The AI Web Agency for Luxury{" "}
           </span>
@@ -135,13 +135,13 @@ export default function Hero() {
         </h1>
 
         {/* Sub-headline */}
-        <p className="text-[14px] sm:text-[16px] md:text-[20px] font-normal leading-relaxed text-white/90">
+        <p className="text-[14px] sm:text-[16px] md:text-[20px] font-normal leading-relaxed text-white/90 text-center max-w-[640px] mx-auto">
           Custom websites that make your watches look premium and collectors
           confident buying — built around trust, desire, and value
         </p>
 
         {/* Feature Bullet Points */}
-        <div className="flex flex-row flex-wrap gap-3 sm:gap-4 mt-2">
+        <div className="flex flex-row flex-wrap justify-center items-center gap-3 sm:gap-4 mt-2 w-full">
           {["Premium Website", "Social Media Design", "AI Watch Photography"].map((feature, idx) => (
             <div key={idx} className="flex items-center gap-2 sm:gap-3">
               <Image src="/images/shield-icon.svg" alt="Check" width={24} height={29} className="w-[18px] sm:w-[24px]" />
@@ -157,7 +157,7 @@ export default function Hero() {
           href="https://calendly.com/rihalahmed10/introductory-call"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full sm:w-fit px-8 min-h-[46px] rounded-[99px] bg-gradient-to-r from-[#d8aa4e] to-[#f7cd67] flex items-center justify-center text-[14px] sm:text-[15px] font-bold text-[#000000] uppercase mt-4 hover:shadow-[0_0_15px_rgba(247,205,103,0.5)] transition-all duration-300"
+          className="w-full sm:w-fit px-8 min-h-[46px] rounded-[99px] bg-gradient-to-r from-[#d8aa4e] to-[#f7cd67] flex items-center justify-center text-[14px] sm:text-[15px] font-bold text-[#000000] uppercase mt-4 hover:shadow-[0_0_15px_rgba(247,205,103,0.5)] transition-all duration-300 mx-auto"
         >
           Apply for a Free Project
         </Link>
