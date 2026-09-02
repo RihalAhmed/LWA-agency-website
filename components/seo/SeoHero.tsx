@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const features = [
+  { text: "Custom Design, Not a Template", alt: "Custom design checkmark icon" },
+  { text: "See It Before You Pay", alt: "See it before you pay checkmark icon" },
+  { text: "$0 Until You Approve", alt: "Zero cost until approved checkmark icon" },
+];
+
 export default function SeoHero() {
   return (
     <section className="w-full flex flex-col items-center pt-10 pb-14 lg:pt-[120px] lg:pb-[100px] bg-black">
@@ -38,32 +44,22 @@ export default function SeoHero() {
           Get Your Free $350 Concept Preview →
         </Link>
 
-        {/* Feature Points */}
+        {/* Feature Points with Unique Descriptive Alt Text */}
         <div className="flex flex-row flex-wrap justify-center items-center gap-3 sm:gap-4 lg:gap-8 mt-6 lg:mt-10">
-          {["Custom Design, Not a Template", "See It Before You Pay", "$0 Until You Approve"].map((feature, idx) => (
+          {features.map((feature, idx) => (
             <div key={idx} className="flex items-center gap-2 lg:gap-3">
               <Image 
                 src="/images/shield-icon.svg" 
-                alt="Verified service guarantee" 
+                alt={feature.alt} 
                 width={28} 
                 height={34} 
                 className="w-[18px] sm:w-[22px] lg:w-[28px] h-auto" 
               />
               <span className="text-[13px] sm:text-[14px] lg:text-[18px] font-bold text-white">
-                {feature}
+                {feature.text}
               </span>
             </div>
           ))}
-        </div>
-
-        {/* Contextual Internal Link to Homepage Portfolio */}
-        <div className="mt-6 sm:mt-8 text-center">
-          <Link 
-            href="/#portfolio" 
-            className="text-[13px] sm:text-[15px] font-medium text-white/70 hover:text-[#f7cd67] underline underline-offset-4 transition-colors"
-          >
-            See our recent work and live watch portfolio →
-          </Link>
         </div>
 
       </div>

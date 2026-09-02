@@ -12,7 +12,7 @@ export default function SeoWhyWatchBrands() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
               src="/images/about-image.png" 
-              alt="Rihal Ahmed, founder and watch website design specialist at The Luxury Watch Agency"
+              alt="Watch website design specialist"
               className="w-full h-full object-cover rounded-[20px] lg:rounded-[40px]"
             />
             
@@ -24,7 +24,7 @@ export default function SeoWhyWatchBrands() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
                 src="/images/rihal-signature.png" 
-                alt="Signature of founder Rihal Ahmed"
+                alt="Rihal signature, founder of The Luxury Watch Agency"
                 className="w-auto h-[36px] md:h-[58px] mb-[3px] object-contain"
                 style={{ filter: "brightness(0) invert(1)" }}
               />
@@ -54,12 +54,13 @@ export default function SeoWhyWatchBrands() {
             <p className="uppercase font-bold text-white/90">
               WE ONLY BUILD FOR WATCHES. THAT&apos;S THE ENTIRE BUSINESS.
             </p>
-            <div className="pt-2">
+            <div className="pt-2 text-[14px] sm:text-[15px] xl:text-[16px] 2xl:text-[20px] text-white/80">
+              Curious what that actually looks like?{" "}
               <Link 
-                href="/#about" 
-                className="text-[14px] sm:text-[16px] font-medium text-[#f7cd67] underline underline-offset-4 hover:text-[#e8b94b] transition-colors"
+                href="/#portfolio" 
+                className="text-[#f7cd67] font-medium underline underline-offset-4 hover:text-[#e8b94b] transition-colors"
               >
-                Learn more about our agency story and design standards →
+                See our recent work →
               </Link>
             </div>
           </div>

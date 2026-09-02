@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
-const AudienceCard = ({ title, text, iconPath }: { title: string, text: string, iconPath: string }) => (
+const AudienceCard = ({ title, text, iconPath, iconAlt }: { title: string, text: string, iconPath: string, iconAlt: string }) => (
   <div className="group w-full max-w-[780px] bg-white rounded-[14px] lg:rounded-[16px] p-4 sm:p-5 flex items-center gap-3.5 lg:gap-6 shadow-sm hover:shadow-xl border border-black/20 transition-all duration-300 hover:bg-black">
     <div className="relative w-[44px] lg:w-[80px] h-[44px] lg:h-[80px] flex-shrink-0 transition-all duration-300 brightness-0 group-hover:brightness-100">
-      <Image src={iconPath} alt={`${title} specialization icon`} fill className="object-contain" />
+      <Image src={iconPath} alt={iconAlt} fill className="object-contain" />
     </div>
     <div className="flex flex-col">
       <h3 className="text-[13px] sm:text-[14px] lg:text-[20px] font-bold text-black group-hover:text-white uppercase leading-tight transition-colors duration-300">{title}</h3>
@@ -39,17 +40,31 @@ export default function SeoBuiltFor() {
               title="INDEPENDENT WATCH BRANDS" 
               text="Launching their first proper online presence — built to match the quality of the product from day one." 
               iconPath="/images/why-us-icon1.png" 
+              iconAlt="Independent watch brand website design icon"
             />
             <AudienceCard 
               title="MULTI-BRAND BOUTIQUE RETAILERS" 
               text="Competing against bigger, better-funded dealer chains — with a website that makes the smaller operation feel more premium." 
               iconPath="/images/why-us-icon2.png" 
+              iconAlt="Multi-brand boutique watch retailer website icon"
             />
             <AudienceCard 
               title="ESTABLISHED DEALERS" 
               text="Whose current site doesn't match the quality of their inventory — and they know it's costing them credibility." 
               iconPath="/images/why-us-icon3.png" 
+              iconAlt="Established watch dealer website redesign icon"
             />
+
+            {/* Contextual Link to Founder/About approach */}
+            <div className="pt-2 text-[14px] sm:text-[15px] lg:text-[16px] text-black/80 font-medium">
+              Want to know how we work with founders directly?{" "}
+              <Link 
+                href="/#about" 
+                className="text-[#c89841] font-semibold underline underline-offset-4 hover:text-black transition-colors"
+              >
+                Read more about our approach →
+              </Link>
+            </div>
           </div>
 
           {/* Right Column (Image) */}
@@ -58,7 +73,7 @@ export default function SeoBuiltFor() {
             <div className="absolute inset-0 rounded-[14px] lg:rounded-[20px] overflow-hidden">
               <Image 
                 src="/images/why-us-main.png" 
-                alt="Luxury watch brand e-commerce website design presentation" 
+                alt="Watch website design for brands" 
                 fill 
                 className="object-cover object-center" 
               />
@@ -68,7 +83,7 @@ export default function SeoBuiltFor() {
             <div className="absolute w-[120px] sm:w-[170px] lg:w-[190px] xl:w-[230px] 2xl:w-[282px] h-auto aspect-square z-30 left-2 sm:left-3 lg:left-3 bottom-2 sm:bottom-3 lg:-bottom-[20px] 2xl:-bottom-[40px] drop-shadow-2xl">
               <Image 
                 src="/images/why-us-float.png" 
-                alt="100% satisfaction guarantee badge for luxury watch website projects" 
+                alt="Zero-cost-until-approved satisfaction guarantee badge" 
                 fill 
                 className="object-contain" 
               />

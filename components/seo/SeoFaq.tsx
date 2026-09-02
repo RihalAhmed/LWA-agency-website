@@ -108,7 +108,7 @@ export default function SeoFaq() {
       <div className="absolute bottom-0 left-0 w-full lg:left-1/2 lg:-translate-x-1/2 lg:w-[1255px] h-[120px] sm:h-[150px] lg:h-[218px] opacity-100 pointer-events-none z-0">
         <Image 
           src="/images/glow-rectangle.png" 
-          alt="Glowing Accent" 
+          alt="" 
           fill 
           className="object-contain lg:object-cover object-bottom" 
         />

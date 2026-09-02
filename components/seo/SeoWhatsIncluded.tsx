@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { 
   Palette,
   Film,
@@ -25,7 +24,6 @@ const includedData = [
   {
     title: "Custom Design, Not a Template",
     image: "/images/service-1.png",
-    alt: "Bespoke luxury watch website design and custom typography layout",
     features: [
       { title: "Built From Scratch", desc: "Every site is designed from scratch around your specific brand and collection — nothing recycled from an unrelated industry.", icon: Palette, highlighted: true },
     ]
@@ -33,7 +31,6 @@ const includedData = [
   {
     title: "Cinematic Product Presentation",
     image: "/images/service-2.png",
-    alt: "High-resolution cinematic watch photography and dial presentation",
     features: [
       { title: "Collector-Grade Visuals", desc: "Watches are shown the way a collector would want to examine them in person — detail, craftsmanship, and story front and center.", icon: Film, highlighted: true },
     ]
@@ -41,7 +38,6 @@ const includedData = [
   {
     title: "Conversion-Focused Structure",
     image: "/images/service-3.png",
-    alt: "Conversion-optimized watch boutique checkout and enquiry interface",
     features: [
       { title: "Built to Convert", desc: "The site is built to move a visitor from browsing to booking an appointment, sending an enquiry, or completing a purchase — not just to look nice.", icon: Target, highlighted: true },
     ]
@@ -49,7 +45,6 @@ const includedData = [
   {
     title: "Mobile-First Build",
     image: "/images/service-1.png",
-    alt: "Mobile-responsive luxury watch website experience on smartphone",
     features: [
       { title: "Designed for Mobile Reality", desc: "Most of your collectors are browsing on their phone first. The site is designed for that reality, not adapted to it after the fact.", icon: Smartphone, highlighted: true },
     ]
@@ -76,7 +71,7 @@ export default function SeoWhatsIncluded() {
               <div className="relative w-full h-[200px] lg:h-[220px]">
                 <Image 
                   src={item.image} 
-                  alt={item.alt} 
+                  alt={item.title} 
                   fill 
                   className="object-cover"
                 />
@@ -97,17 +92,6 @@ export default function SeoWhatsIncluded() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Contextual Internal Link back to Portfolio */}
-        <div className="mt-10 lg:mt-14 flex flex-col sm:flex-row items-center justify-center gap-2 text-center text-[14px] sm:text-[16px] text-white/80">
-          <span>Want to see how these standards look in a finished build?</span>
-          <Link 
-            href="/#portfolio" 
-            className="text-[#f7cd67] font-semibold underline underline-offset-4 hover:text-[#e8b94b] transition-colors"
-          >
-            See our recent work and portfolio →
-          </Link>
         </div>
 
       </div>
