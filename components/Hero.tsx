@@ -185,13 +185,13 @@ export default function Hero() {
         </div>
 
         {/* Laptop Mockup Image */}
-        <div className="w-[130%] sm:w-[120%] max-w-none flex justify-center -ml-[25%] sm:-ml-[15%] -mt-10 sm:-mt-14 mb-2 relative z-0">
+        <div className="w-full flex justify-center items-center -mt-6 sm:-mt-10 mb-2 relative z-0">
           <Image
-            src="/images/laptop-mockup.png"
+            src="/images/luxury-watch-website.png"
             alt="Laptop showing luxury watch website"
-            width={817}
-            height={593}
-            className="w-full h-auto object-contain"
+            width={1496}
+            height={1051}
+            className="w-full max-w-[640px] h-auto object-contain mx-auto"
             priority
           />
         </div>
