@@ -86,7 +86,7 @@ export default function Header() {
           </Link>
         </div>
 
-        <div className="xl:hidden flex items-center mt-8 relative">
+        <div className="xl:hidden flex items-center mt-[44px] relative">
           {/* Green online dot — top-right, slightly to the left */}
           <span className="absolute -top-[2px] right-1 w-[7px] h-[7px] rounded-full bg-[#84cc00] z-10" />
           <a
