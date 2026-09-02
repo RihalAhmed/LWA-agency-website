@@ -93,7 +93,7 @@ export default function Header() {
             href="https://api.whatsapp.com/send?phone=8801302668778"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center border border-[#d8aa4e] rounded-full px-3 py-[6px] text-[10px] sm:text-[11px] font-bold text-white uppercase tracking-wide hover:bg-[#d8aa4e]/10 transition-colors duration-200 whitespace-nowrap"
+            className="flex items-center justify-center border border-[#d8aa4e] rounded-full px-4 h-[32px] text-[10px] sm:text-[11px] font-bold text-white uppercase tracking-wide hover:bg-[#d8aa4e]/10 transition-colors duration-200 whitespace-nowrap leading-none"
           >
             Whatsapp Rihal
           </a>
