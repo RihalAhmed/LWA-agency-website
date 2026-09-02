@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SmoothScrolling from "@/components/SmoothScrolling";
@@ -64,6 +65,20 @@ export default function RootLayout({
   return (
     <html lang="en" className={`antialiased ${avantGarde.variable}`}>
       <body className="bg-black text-white font-sans overflow-x-hidden min-h-screen flex flex-col">
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-PTDYW80ZLM`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PTDYW80ZLM');
+          `}
+        </Script>
+
         <SmoothScrolling>
           <Header />
           <main className="flex-grow w-full flex flex-col items-center">
