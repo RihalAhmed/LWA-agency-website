@@ -17,25 +17,23 @@ const AudienceCard = ({ title, text, iconPath, iconAlt }: { title: string, text:
 
 export default function SeoBuiltFor() {
   return (
-    <section className="w-full bg-[#f7f7f7] flex flex-col items-center py-14 lg:pt-[100px] lg:pb-[100px] overflow-hidden">
-      <div className="w-full max-w-[1800px] px-5 sm:px-6 lg:px-8 xl:px-12 flex flex-col items-center lg:items-start">
+    <section className="w-full bg-[#f7f7f7] flex flex-col items-center py-14 lg:pt-[90px] lg:pb-[90px] overflow-hidden">
+      <div className="w-full max-w-[1800px] px-5 sm:px-6 lg:px-8 xl:px-12 flex flex-col items-center">
         
-        {/* Content Columns */}
-        <div className="w-full max-w-[1728px] mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-center mt-2 lg:mt-[40px] gap-8 lg:gap-12 xl:gap-20 relative">
+        {/* Content Column */}
+        <div className="w-full max-w-[880px] mx-auto flex flex-col items-center mt-2 lg:mt-[20px]">
           
-          {/* Left Column */}
-          <div className="flex flex-col gap-3 lg:gap-5 w-full lg:w-[50%] 2xl:w-[780px] z-10 mt-0">
-            
-            {/* Header */}
-            <div className="w-full mb-2 lg:mb-8">
-              <h2 className="text-[26px] sm:text-[30px] md:text-4xl lg:text-[32px] xl:text-[38px] 2xl:text-[48px] font-bold text-black max-w-[881px] leading-tight text-center lg:text-left">
-                Built Exclusively for <span className="text-[#c89841]">Watch Brands</span><br className="hidden 2xl:block"/> and Dealers
-              </h2>
-              <p className="text-[14px] sm:text-[15px] md:text-[18px] lg:text-[18px] 2xl:text-[20px] font-medium text-black/80 mt-2 lg:mt-4 max-w-[804px] leading-relaxed text-center lg:text-left mx-auto lg:mx-0 px-2 sm:px-0">
-                We work with brands and dealers who take their online presence as seriously as their inventory.
-              </p>
-            </div>
+          {/* Header */}
+          <div className="w-full mb-4 lg:mb-8 text-center">
+            <h2 className="text-[26px] sm:text-[30px] md:text-4xl lg:text-[32px] xl:text-[38px] 2xl:text-[48px] font-bold text-black max-w-[881px] leading-tight text-center mx-auto">
+              Built Exclusively for <span className="text-[#c89841]">Watch Brands</span><br className="hidden sm:block"/> and Dealers
+            </h2>
+            <p className="text-[14px] sm:text-[15px] md:text-[18px] lg:text-[18px] 2xl:text-[20px] font-medium text-black/80 mt-2 lg:mt-4 max-w-[804px] leading-relaxed text-center mx-auto px-2 sm:px-0">
+              We work with brands and dealers who take their online presence as seriously as their inventory.
+            </p>
+          </div>
 
+          <div className="flex flex-col gap-3 lg:gap-5 w-full z-10">
             <AudienceCard 
               title="INDEPENDENT WATCH BRANDS" 
               text="Launching their first proper online presence — built to match the quality of the product from day one." 
@@ -56,7 +54,7 @@ export default function SeoBuiltFor() {
             />
 
             {/* Contextual Link to Founder/About approach */}
-            <div className="pt-2 text-[14px] sm:text-[15px] lg:text-[16px] text-black/80 font-medium">
+            <div className="pt-2 text-center text-[14px] sm:text-[15px] lg:text-[16px] text-black/80 font-medium">
               Want to know how we work with founders directly?{" "}
               <Link 
                 href="/#about" 
@@ -64,29 +62,6 @@ export default function SeoBuiltFor() {
               >
                 Read more about our approach →
               </Link>
-            </div>
-          </div>
-
-          {/* Right Column (Image) */}
-          <div className="relative w-full lg:w-[45%] 2xl:w-[703px] h-[260px] sm:h-[400px] lg:h-auto lg:aspect-[703/750] mt-4 lg:mt-0 shrink-0">
-            {/* Main Image */}
-            <div className="absolute inset-0 rounded-[14px] lg:rounded-[20px] overflow-hidden">
-              <Image 
-                src="/images/why-us-main.png" 
-                alt="Watch website design for brands" 
-                fill 
-                className="object-cover object-center" 
-              />
-            </div>
-            
-            {/* Floating Badge */}
-            <div className="absolute w-[120px] sm:w-[170px] lg:w-[190px] xl:w-[230px] 2xl:w-[282px] h-auto aspect-square z-30 left-2 sm:left-3 lg:left-3 bottom-2 sm:bottom-3 lg:-bottom-[20px] 2xl:-bottom-[40px] drop-shadow-2xl">
-              <Image 
-                src="/images/why-us-float.png" 
-                alt="Zero-cost-until-approved satisfaction guarantee badge" 
-                fill 
-                className="object-contain" 
-              />
             </div>
           </div>
 
