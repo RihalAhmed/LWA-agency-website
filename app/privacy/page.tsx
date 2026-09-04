@@ -1,3 +1,18 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description:
+    "Privacy Policy for The Luxury Watch Agency. Learn how we handle project inquiries, client data, and confidentiality.",
+  alternates: {
+    canonical: "https://www.theluxurywatchagency.com/privacy",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function PrivacyPolicy() {
   return (
     <section className="w-full flex justify-center py-24 px-6 relative z-10">

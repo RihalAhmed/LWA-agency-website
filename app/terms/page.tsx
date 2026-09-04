@@ -1,3 +1,18 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service",
+  description:
+    "Terms of Service for The Luxury Watch Agency. Details on our $0 until you approve payment model, project agreements, and intellectual property.",
+  alternates: {
+    canonical: "https://www.theluxurywatchagency.com/terms",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function TermsOfService() {
   return (
     <section className="w-full flex justify-center py-24 px-6 relative z-10">

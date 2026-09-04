@@ -29,13 +29,34 @@ const avantGarde = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "The Luxury Watch Agency — AI Web Agency for Watch Brands",
+  metadataBase: new URL("https://www.theluxurywatchagency.com"),
+  title: {
+    default: "The Luxury Watch Agency — AI Web Agency for Watch Brands",
+    template: "%s | The Luxury Watch Agency",
+  },
   description:
     "Custom websites that make your watches look premium and collectors confident buying — built around trust, desire, and value.",
+  alternates: {
+    canonical: "https://www.theluxurywatchagency.com",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/icon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/icon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/icon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "The Luxury Watch Agency",
     description: "Custom websites that make your watches look premium and collectors confident buying.",
-    url: "https://theluxurywatchagency.com",
+    url: "https://www.theluxurywatchagency.com",
     siteName: "The Luxury Watch Agency",
     images: [
       {
@@ -54,7 +75,6 @@ export const metadata: Metadata = {
     description: "Custom websites that make your watches look premium and collectors confident buying.",
     images: ["/images/form-header-final.png"],
   },
-  metadataBase: new URL("https://theluxurywatchagency.com"),
 };
 
 export default function RootLayout({

@@ -3,42 +3,10 @@ import Image from "next/image";
 export default function BlueprintForm() {
   return (
     <section id="contact" className="relative w-full bg-white flex flex-col items-center py-16 lg:pt-[120px] lg:pb-[160px] overflow-hidden">
-      <div className="w-full max-w-[1700px] px-4 lg:px-8 xl:px-12 flex flex-col-reverse xl:flex-row gap-10 xl:gap-8 2xl:gap-[71px] items-center xl:items-start xl:justify-between">
+      <div className="w-full max-w-[1700px] px-4 lg:px-8 xl:px-12 flex flex-col xl:flex-row gap-10 xl:gap-8 2xl:gap-[71px] items-center xl:items-start xl:justify-between">
         
-        {/* Left Column: Form Card */}
-        <div className="w-full xl:w-[42%] 2xl:w-[670px] max-w-[670px] mx-auto xl:mx-0 bg-transparent rounded-[20px] overflow-hidden flex flex-col">
-          {/* Header Graphic area */}
-          <div className="w-full aspect-[670/381] min-h-[220px] relative">
-            <Image 
-              src="/images/form-header-final.png" 
-              alt="I Build Like Your Reputation Is Mine. You Have My Word." 
-              fill 
-              className="object-cover" 
-              priority
-            />
-          </div>
-
-          {/* Form Content */}
-          <div className="w-full p-5 sm:p-8 lg:p-12 flex flex-col pt-5 bg-white border-x border-b border-black/30 rounded-b-[20px] shadow-[0_30px_60px_rgba(0,0,0,0.1)]">
-            <h3 className="text-[18px] sm:text-[24px] lg:text-[28px] font-bold text-[#141414] uppercase mb-4 lg:mb-8 text-center">
-              SEE WHAT <span className="text-[#a67326]">WE&apos;D BUILD</span> FOR YOU.
-            </h3>
-            
-            <form className="w-full flex flex-col gap-3 lg:gap-4">
-              <input type="text" placeholder="Full Name:" className="w-full h-[40px] lg:h-[46px] rounded-[10px] border border-black/50 bg-transparent px-4 text-[13px] lg:text-[14px] text-[#141414] placeholder-[#141414]/70 focus:outline-none focus:border-[#a67326] font-medium" />
-              <input type="tel" placeholder="Phone:" className="w-full h-[40px] lg:h-[46px] rounded-[10px] border border-black/50 bg-transparent px-4 text-[13px] lg:text-[14px] text-[#141414] placeholder-[#141414]/70 focus:outline-none focus:border-[#a67326] font-medium" />
-              <input type="email" placeholder="Email:" className="w-full h-[40px] lg:h-[46px] rounded-[10px] border border-black/50 bg-transparent px-4 text-[13px] lg:text-[14px] text-[#141414] placeholder-[#141414]/70 focus:outline-none focus:border-[#a67326] font-medium" />
-              <input type="url" placeholder="Website Url (if have)" className="w-full h-[40px] lg:h-[46px] rounded-[10px] border border-black/50 bg-transparent px-4 text-[13px] lg:text-[14px] text-[#141414] placeholder-[#141414]/70 focus:outline-none focus:border-[#a67326] font-medium" />
-              
-              <button type="submit" className="w-full min-h-[44px] lg:min-h-[49px] bg-[#a67326] text-white rounded-[10px] text-[14px] lg:text-[16px] font-bold mt-2 hover:brightness-110 transition-all cursor-pointer uppercase py-2 lg:py-3">
-                Submit Now
-              </button>
-            </form>
-          </div>
-        </div>
-
-        {/* Right Column: Blueprint Info */}
-        <div className="w-full xl:w-[53%] flex flex-col max-w-[833px] mx-auto xl:mx-0">
+        {/* Blueprint Info Column (Source First for H2 SEO hierarchy) */}
+        <div className="w-full xl:w-[53%] flex flex-col max-w-[833px] mx-auto xl:mx-0 xl:order-2">
           <h2 className="text-[28px] md:text-[40px] lg:text-[32px] xl:text-[38px] 2xl:text-[53px] font-bold text-[#141414] leading-tight mb-4 text-center xl:text-left">
             Your Watch And <span className="text-[#a67326]">Our Blueprint</span>
           </h2>
@@ -98,6 +66,38 @@ export default function BlueprintForm() {
             </div>
           </div>
 
+        </div>
+
+        {/* Form Card Column (Positioned left on desktop via xl:order-1) */}
+        <div className="w-full xl:w-[42%] 2xl:w-[670px] max-w-[670px] mx-auto xl:mx-0 bg-transparent rounded-[20px] overflow-hidden flex flex-col xl:order-1">
+          {/* Header Graphic area */}
+          <div className="w-full aspect-[670/381] min-h-[220px] relative">
+            <Image 
+              src="/images/form-header-final.png" 
+              alt="I Build Like Your Reputation Is Mine. You Have My Word." 
+              fill 
+              className="object-cover" 
+              priority
+            />
+          </div>
+
+          {/* Form Content */}
+          <div className="w-full p-5 sm:p-8 lg:p-12 flex flex-col pt-5 bg-white border-x border-b border-black/30 rounded-b-[20px] shadow-[0_30px_60px_rgba(0,0,0,0.1)]">
+            <h3 className="text-[18px] sm:text-[24px] lg:text-[28px] font-bold text-[#141414] uppercase mb-4 lg:mb-8 text-center">
+              SEE WHAT <span className="text-[#a67326]">WE&apos;D BUILD</span> FOR YOU.
+            </h3>
+            
+            <form className="w-full flex flex-col gap-3 lg:gap-4">
+              <input type="text" placeholder="Full Name:" className="w-full h-[40px] lg:h-[46px] rounded-[10px] border border-black/50 bg-transparent px-4 text-[13px] lg:text-[14px] text-[#141414] placeholder-[#141414]/70 focus:outline-none focus:border-[#a67326] font-medium" />
+              <input type="tel" placeholder="Phone:" className="w-full h-[40px] lg:h-[46px] rounded-[10px] border border-black/50 bg-transparent px-4 text-[13px] lg:text-[14px] text-[#141414] placeholder-[#141414]/70 focus:outline-none focus:border-[#a67326] font-medium" />
+              <input type="email" placeholder="Email:" className="w-full h-[40px] lg:h-[46px] rounded-[10px] border border-black/50 bg-transparent px-4 text-[13px] lg:text-[14px] text-[#141414] placeholder-[#141414]/70 focus:outline-none focus:border-[#a67326] font-medium" />
+              <input type="url" placeholder="Website Url (if have)" className="w-full h-[40px] lg:h-[46px] rounded-[10px] border border-black/50 bg-transparent px-4 text-[13px] lg:text-[14px] text-[#141414] placeholder-[#141414]/70 focus:outline-none focus:border-[#a67326] font-medium" />
+              
+              <button type="submit" className="w-full min-h-[44px] lg:min-h-[49px] bg-[#a67326] text-white rounded-[10px] text-[14px] lg:text-[16px] font-bold mt-2 hover:brightness-110 transition-all cursor-pointer uppercase py-2 lg:py-3">
+                Submit Now
+              </button>
+            </form>
+          </div>
         </div>
 
       </div>

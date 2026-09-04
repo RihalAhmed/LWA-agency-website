@@ -83,7 +83,7 @@ export default function Footer() {
             <h4 className={h4}>Contact Us</h4>
             <ul className={ul}>
               <li className={liStart}>
-                <span className="pt-1">Email: <a href="mailto:mirrihalbinamith@gmail.com" className={link}>mirrihalbinamith@gmail.com</a></span>
+                <span className="pt-1">Email: <a href="mailto:rihal@theluxurywatchagency.com" className={link}>rihal@theluxurywatchagency.com</a></span>
               </li>
               <li className={liStart}>
                 <span className="pt-1">Phone: <a href="tel:+8801763364217" className={link}>+8801763364217</a></span>

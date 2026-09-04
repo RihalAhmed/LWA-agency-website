@@ -1,3 +1,18 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Copyright & Intellectual Property",
+  description:
+    "Copyright notice and intellectual property ownership terms for The Luxury Watch Agency designs, media, and client assets.",
+  alternates: {
+    canonical: "https://www.theluxurywatchagency.com/copyright",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function Copyright() {
   return (
     <section className="w-full flex justify-center py-24 px-6 relative z-10">

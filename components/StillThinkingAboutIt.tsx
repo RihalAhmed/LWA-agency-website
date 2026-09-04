@@ -27,9 +27,9 @@ const ObjectionRow = ({
       className={`w-full lg:w-[40%] flex-shrink-0 bg-gradient-to-r from-[#212121] to-[#151515] px-6 lg:pl-10 lg:pr-8 py-5 lg:py-8 flex items-center cursor-pointer lg:cursor-default transition-all duration-300 ${isFirst ? 'rounded-t-[20px] lg:rounded-tr-none lg:rounded-tl-[20px]' : ''} ${isLast && !isOpen ? 'rounded-b-[20px] lg:rounded-bl-[20px]' : ''} ${isLast && isOpen ? 'lg:rounded-bl-[20px]' : ''}`}
     >
       <div className="flex w-full justify-between items-center">
-        <h4 className={`font-medium uppercase leading-snug transition-all duration-300 ${isOpen ? 'text-white text-[14px] sm:text-[15px] lg:text-[18px]' : 'text-white/70 text-[13px] sm:text-[14px] lg:text-white/90 lg:text-[18px]'}`}>
+        <h3 className={`font-medium uppercase leading-snug transition-all duration-300 ${isOpen ? 'text-white text-[14px] sm:text-[15px] lg:text-[18px]' : 'text-white/70 text-[13px] sm:text-[14px] lg:text-white/90 lg:text-[18px]'}`}>
           {objection}
-        </h4>
+        </h3>
         {/* Optional plus/minus icon for mobile to indicate accordion (hidden on desktop) */}
         <div className="lg:hidden ml-4 text-white/50 text-[18px]">
           {isOpen ? '−' : '+'}
@@ -39,9 +39,9 @@ const ObjectionRow = ({
     
     {/* Right Column (Solution) - Hidden on mobile if not open */}
     <div className={`flex-grow px-6 lg:pl-12 lg:pr-10 py-5 lg:py-8 flex-col justify-center bg-[#111111] lg:bg-transparent ${isOpen ? 'flex' : 'hidden lg:flex'} ${isFirst ? 'lg:rounded-tr-[20px]' : ''} ${isLast ? 'rounded-b-[20px] lg:rounded-bl-none lg:rounded-br-[20px]' : ''}`}>
-      <h3 className="text-[14px] sm:text-[15px] lg:text-[18px] font-bold text-white uppercase leading-tight mb-2 lg:mb-2">
+      <h4 className="text-[14px] sm:text-[15px] lg:text-[18px] font-bold text-white uppercase leading-tight mb-2 lg:mb-2">
         {title}
-      </h3>
+      </h4>
       <p className="text-[12px] sm:text-[13px] lg:text-[16px] font-medium text-white/70 leading-relaxed max-w-[720px]">
         {text}
       </p>
